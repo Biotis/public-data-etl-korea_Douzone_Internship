@@ -28,12 +28,6 @@ src/config.py
 .venv/
 venv/
 
-# 데이터/출력 파일
-data/*.xlsx
-data/*.csv
-data/*.xls
-data/*.json
-
 # 로그/기타
 *.log
 *.tmp

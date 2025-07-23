@@ -1,0 +1,28 @@
+Python
+pycache/
+*.py[cod]
+*.so
+
+환경 파일
+.env
+*.env
+
+로그, 디버깅
+*.log
+
+Jupyter Notebook 체크포인트
+.ipynb_checkpoints/
+
+데이터 결과물 (버전관리 불필요)
+data/
+results/
+*.csv
+*.xlsx
+
+IDE 관련 설정
+.vscode/
+.idea/
+
+OS 관련 파일
+.DS_Store
+Thumbs.db

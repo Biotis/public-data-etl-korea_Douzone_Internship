@@ -12,10 +12,6 @@ def export_to_csv(input_file, output_file):
         output_file (str): Path to save CSV.
     """
     df = pd.read_excel(input_file)
-    
-    if "고유번호" in df.columns:
-        df["고유번호"] = df["고유번호"].astype(str).str.zfill(8)
-        
     df.to_csv(output_file, index=False, encoding='utf-8-sig')
     print(f"Exported {input_file} to {output_file}")
 

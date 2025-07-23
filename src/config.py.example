@@ -1,0 +1,13 @@
+"""
+Configuration file for API keys and other global settings.
+"""
+
+# OpenDART API Key (replace with your real key)
+DART_API_KEY = "DART_API_KEY"
+
+# 국세청 사업자등록번호 유효성 검사 API 키 (replace with your real key)
+NTS_API_KEY = "NTS_API_KEY"
+
+# Default data input/output path, batch size
+DATA_PATH = "data/"
+BATCH_SIZE = 100

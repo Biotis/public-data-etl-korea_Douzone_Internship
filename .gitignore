@@ -1,28 +1,51 @@
-Python
-pycache/
-*.py[cod]
-*.so
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.egg-info/
+.eggs/
 
-환경 파일
-.env
-*.env
-
-로그, 디버깅
-*.log
-
-Jupyter Notebook 체크포인트
+# Jupyter/IPython checkpoints
 .ipynb_checkpoints/
 
-데이터 결과물 (버전관리 불필요)
-data/
-results/
-*.csv
-*.xlsx
-
-IDE 관련 설정
+# VSCode, PyCharm, JetBrains
 .vscode/
 .idea/
+*.code-workspace
 
-OS 관련 파일
+# OS files
 .DS_Store
 Thumbs.db
+
+# 환경설정/민감정보
+.env
+*.env
+config.py
+src/config.py
+
+# 가상환경 디렉터리(venv, .venv 등)
+.venv/
+venv/
+
+# 데이터/출력 파일
+data/*.xlsx
+data/*.csv
+data/*.xls
+data/*.json
+
+# 로그/기타
+*.log
+*.tmp
+*.bak
+
+# 테스트 결과
+htmlcov/
+.coverage
+.tox/
+.cache/
+pytest_cache/
+
+# 기타 빌드/배포 산출물
+dist/
+build/

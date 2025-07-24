@@ -31,16 +31,16 @@ This ETL pipeline was designed as part of a data engineering internship assignme
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
-├── data/            # Input/output (sample) files
+├── data/             # Input/output (sample data included)
 ├── src/
-│   ├── config.py
-│   ├── pipeline.py  # Main pipeline script
-│   ├── collect/
-│   ├── standardize/
-│   ├── validate/
-│   ├── transform/
-│   └── export/
-└── tests/           # Unit tests for each ETL stage
+│   ├── config.py     # API keys and configuration
+│   ├── pipeline.py   # Main ETL pipeline entry point
+│   ├── collect/      # Data ingestion from OpenDART
+│   ├── standardize/  # Cleaning & normalization scripts
+│   ├── validate/     # NTS-based business number verification
+│   ├── transform/    # Metadata enrichment and formatting
+│   └── export/       # Output as CSV/Excel
+└── tests/            # Unit tests for individual pipeline stages
 ```
 
 ---
@@ -53,11 +53,15 @@ This ETL pipeline was designed as part of a data engineering internship assignme
 pip install -r requirements.txt
 ```
 
-### 2. Set API keys
+### 2. Configure API keys
 
 - Copy `src/config.py.example` to `src/config.py` and enter your API keys:
     - `DART_API_KEY`: [Apply for OpenDART API Key](https://opendart.fss.or.kr/)
     - `NTS_API_KEY`: [Apply for Business Registration Validation API (data.go.kr)](https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15081808)
+      
+   # src/config.py
+     DART_API_KEY = "your_open_dart_key"
+     NTS_API_KEY = "your_national_tax_service_key"
 
 💡 Both APIs are free to use but require registration. Approval may take 1–2 business days depending on the service.
 
@@ -72,7 +76,7 @@ python -m src.pipeline
 
 ---
 
-## 🏗️ Pipeline Flow
+## 🔄 Pipeline Flow
 
 1. **Collect**: Download raw master data from OpenDART (to `data/raw_dart_data.xlsx`)
 2. **Standardize**: Clean and normalize fields (to `data/standardized_company_data.xlsx`)
@@ -130,6 +134,25 @@ standardize_company_data(
     "data/raw_dart_data.xlsx", "data/standardized_company_data.xlsx"
 )
 ```
+
+---
+
+## 🛑 Caution
+
+API credentials must not be committed to version control.
+
+Intermediate results and output files are .gitignored by default.
+
+This project is for educational and portfolio purposes only.
+
+---
+
+## 🧑‍💻 Author
+
+Jung Seungil (정승일)
+Internship Project @ Douzone Bizon
+GitHub: github.com/Biotis
+email: rhjung2001@gmail.com
 
 ---
 

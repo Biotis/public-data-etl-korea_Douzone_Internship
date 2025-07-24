@@ -59,9 +59,9 @@ pip install -r requirements.txt
     - `DART_API_KEY`: [Apply for OpenDART API Key](https://opendart.fss.or.kr/)
     - `NTS_API_KEY`: [Apply for Business Registration Validation API (data.go.kr)](https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15081808)
       
-   # src/config.py
-     DART_API_KEY = "your_open_dart_key"
-     NTS_API_KEY = "your_national_tax_service_key"
+   # src/config.py (replace with your real key)
+    - DART_API_KEY = "YOUR_DART_API_KEY"
+    - NTS_API_KEY = "YOUR_NTS_API_KEY"
 
 💡 Both APIs are free to use but require registration. Approval may take 1–2 business days depending on the service.
 

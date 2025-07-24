@@ -155,7 +155,7 @@ Internship Project @ Douzone Bizon
 
 GitHub: github.com/Biotis
 
-email: rhjung2001@gmail.com
+Email: rhjung2001@gmail.com
 
 
 ---

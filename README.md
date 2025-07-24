@@ -81,13 +81,13 @@ python -m src.pipeline
 
 ---
 
-## 🔄 Pipeline Flow
+## 🔄 ETL Flow Overview
 
-1. **Collect**: Download raw master data from OpenDART (to `data/raw_dart_data.xlsx`)
-2. **Standardize**: Clean and normalize fields (to `data/standardized_company_data.xlsx`)
-3. **Validate**: Check validity of business numbers (to `data/validated_company_data.xlsx`)
-4. **Transform**: Enrich or map columns using metadata (to `data/metadata_enriched_data.xlsx`)
-5. **Export**: Output as final CSV (`data/final_output.csv`)
+1. **Collect**: Raw data saved to data/raw_dart_data.xlsx
+2. **Standardize**: Cleaned output in data/standardized_company_data.xlsx
+3. **Validate**: Verified results in data/validated_company_data.xlsx
+4. **Transform**: Metadata enriched at data/metadata_enriched_data.xlsx
+5. **Export**: Final .csv saved to data/final_output.csv
 
 ---
 
@@ -102,15 +102,14 @@ python -m src.pipeline
 
 Unit tests are provided in the `tests/` directory.
 
+Example:
+`tests/test_standardize.py` contains test cases for homepage normalization, name cleanup, etc.
+
 # Run tests
 
 ```bash
 PYTHONPATH=./src pytest tests
 ```
-
-Example test file: `tests/test_standardize.py`
-
----
 
 ## 💡 Key ETL Functions
 
@@ -130,52 +129,25 @@ Example test file: `tests/test_standardize.py`
 
 ---
 
-## 📈 Example Usage
-
-```python
-from src.standardize.standardizer import standardize_company_data
-
-standardize_company_data(
-    "data/raw_dart_data.xlsx", "data/standardized_company_data.xlsx"
-)
-```
-
----
-
-## 🛑 Caution
-
-API credentials must not be committed to version control.
-
-Intermediate results and output files are .gitignored by default.
-
-This project is for educational and portfolio purposes only.
-
----
-
-## 🧑‍💻 Author
+## 🧑‍💻 About the Author
 
 Jung Seungil (정승일)
 
-Internship Project @ Douzone Bizon
+Data Engineering Intern @ Douzone Bizon
 
 GitHub: github.com/Biotis
 
 Email: rhjung2001@gmail.com
 
+---
+
+## ⚠️ Disclaimer
+This repository is for portfolio and learning purposes only.
 
 ---
 
-## 🤝 License
+## 📬 Contact
 
-Copyright (c) 2025 Jung Seungil
+If you're reviewing this project for recruitment or collaboration purposes, feel free to reach out via email or GitHub.
 
-This project was created as part of an internship at Douzone Bizon.
-
-All rights reserved.
-
-This codebase is intended for educational and portfolio demonstration purposes only.  
-You may view and reference this project for learning or evaluation,  
-but reproduction, distribution, modification, or use in any commercial or production environment  
-is strictly prohibited without prior written permission from the author.
-
-Unauthorized commercial use is not allowed under any circumstances.
+---

@@ -60,8 +60,8 @@ pip install -r requirements.txt
     - `NTS_API_KEY`: [Apply for Business Registration Validation API (data.go.kr)](https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15081808)
       
    # src/config.py (replace with your real key)
-    - DART_API_KEY = "YOUR_DART_API_KEY"
-    - NTS_API_KEY = "YOUR_NTS_API_KEY"
+    - `DART_API_KEY` = "YOUR_DART_API_KEY"
+    - `NTS_API_KEY` = "YOUR_NTS_API_KEY"
 
 💡 Both APIs are free to use but require registration. Approval may take 1–2 business days depending on the service.
 

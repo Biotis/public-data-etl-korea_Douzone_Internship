@@ -1,7 +1,16 @@
 # Biznum ETL DART Pipeline
 
-A robust ETL pipeline for collecting, cleaning, validating, transforming, and exporting Korean business registration master data, using public APIs (e.g., OpenDART).  
-This project is designed to demonstrate practical data engineering skills and reproducible, testable ETL pipelines.
+A robust and modular ETL pipeline for collecting, cleaning, validating, transforming, and exporting Korean business registration data using public APIs such as **OpenDART** and **NTS (National Tax Service)**.
+
+---
+
+## 🎯 Project Objective
+
+This project was developed to fulfill the following goal:
+
+> **"To continuously collect data from various sources, including business registration numbers, and construct a unified, consistent master table through standardization and validation."**
+
+This ETL pipeline was designed as part of a data engineering internship assignment at **Douzone Bizon** and demonstrates practical skills in public data integration, API-driven ingestion, validation, and transformation.
 
 ---
 
@@ -47,8 +56,11 @@ pip install -r requirements.txt
 ### 2. Set API keys
 
 - Copy `src/config.py.example` to `src/config.py` and enter your API keys:
-    - `DART_API_KEY`: OpenDART API Key
-    - `NTS_API_KEY`: National Tax Service API Key
+    - `DART_API_KEY`: [Apply for OpenDART API Key](https://opendart.fss.or.kr/)
+    - `NTS_API_KEY`: [Apply for Business Registration Validation API (data.go.kr)](https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15081808)
+
+💡 Both APIs are free to use but require registration. Approval may take 1–2 business days depending on the service.
+
 
 ### 3. Run the pipeline
 
@@ -103,7 +115,7 @@ Example test file: `tests/test_standardize.py`
 
 ## 📝 Notes
 
-- **API keys** must be set in `src/config.py` (do not commit real keys).
+- **API keys** must be set in `src/config.py`
 - Intermediate and output files are ignored by `.gitignore`.
 - This project was used to complete an assigned task during an internship at Douzone Bizon
 

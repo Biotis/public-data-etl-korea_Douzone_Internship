@@ -1,51 +1,56 @@
 # Biznum ETL DART Pipeline
 
-A robust and modular ETL pipeline for collecting, cleaning, validating, transforming, and exporting Korean business registration data using public APIs such as **OpenDART** and **NTS (National Tax Service)**.
+An end-to-end ETL pipeline designed to collect, standardize, validate, and transform Korean corporate master data using public APIs, including OpenDART and the National Tax Service (NTS).  
+This project was built as part of a data engineering internship at **Douzone Bizon**, with a focus on integrating real-world public data into a consistent and clean format for downstream analytics.
 
 ---
 
-## 🎯 Project Objective
+## 📌 Project Goal
 
-This project was developed to fulfill the following goal:
+The main objective was to create a modular pipeline that could:
 
-> **"To continuously collect data from various sources, including business registration numbers, and construct a unified, consistent master table through standardization and validation."**
+- Continuously ingest company-related data (e.g., registration numbers, names, websites)  
+- Clean and normalize key fields across different sources  
+- Validate business registration numbers via the NTS API  
+- Enrich the cleaned dataset with useful metadata  
+- Export the final results in a structured format (CSV/Excel)
 
-This ETL pipeline was designed as part of a data engineering internship assignment at **Douzone Bizon** and demonstrates practical skills in public data integration, API-driven ingestion, validation, and transformation.
-
----
-
-## 🚀 Features
-
-- **Data Collection**: Download corporate master data from OpenDART API.
-- **Standardization**: Clean and standardize company information (registration numbers, homepage, representative names, etc).
-- **Validation**: Validate business registration numbers using the National Tax Service (NTS) API.
-- **Transformation**: Enrich and map data using metadata for analytics or reporting.
-- **Export**: Output results in Excel or CSV for downstream tasks.
+The broader purpose was to practice building practical ETL systems that deal with inconsistent real-world public data, while maintaining reliability and reusability.
 
 ---
 
-## 🗂️ Project Structure
+## ⚙️ Key Features
+
+- **OpenDART Ingestion**: Pulls corporate master data via OpenDART API
+- **Data Standardization**: Cleans raw fields like company names, registration numbers, URLs, and representative names
+- **Business Number Validation**: Cross-checks each registration number against the NTS API
+- **Metadata Enrichment**: Adds supplementary info (e.g., derived fields, tags) to enhance usability
+- **Structured Export**: Outputs final results into `.csv` and `.xlsx` formats
+
+---
+
+## 🗂️ Folder Structure
 
 ```
-.
+biznum-etl-dart/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
-├── data/             # Input/output (sample data included)
+├── data/ # Input and output files (some sample data included)
 ├── src/
-│   ├── config.py     # API keys and configuration
-│   ├── pipeline.py   # Main ETL pipeline entry point
-│   ├── collect/      # Data ingestion from OpenDART
-│   ├── standardize/  # Cleaning & normalization scripts
-│   ├── validate/     # NTS-based business number verification
-│   ├── transform/    # Metadata enrichment and formatting
-│   └── export/       # Output as CSV/Excel
-└── tests/            # Unit tests for individual pipeline stages
+│ ├── config.py     # API credentials and settings
+│ ├── pipeline.py   # ETL orchestrator
+│ ├── collect/      # Data ingestion logic (OpenDART)
+│ ├── standardize/  # Cleaning and normalization modules
+│ ├── validate/     # Business number verification (NTS)
+│ ├── transform/    # Metadata enrichment logic
+│ └── export/       # Exporting results to file
+└── tests/          # Unit tests for individual modules
 ```
 
 ---
 
-## 🛠️ Getting Started
+## 🚀 Quick Start
 
 ### 1. Install requirements
 
@@ -53,7 +58,7 @@ This ETL pipeline was designed as part of a data engineering internship assignme
 pip install -r requirements.txt
 ```
 
-### 2. Configure API keys
+### 2. Set up API keys
 
 - Copy `src/config.py.example` to `src/config.py` and enter your API keys:
     - `DART_API_KEY`: [Apply for OpenDART API Key](https://opendart.fss.or.kr/)

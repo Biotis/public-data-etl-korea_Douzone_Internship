@@ -150,9 +150,13 @@ This project is for educational and portfolio purposes only.
 ## 🧑‍💻 Author
 
 Jung Seungil (정승일)
+
 Internship Project @ Douzone Bizon
+
 GitHub: github.com/Biotis
+
 email: rhjung2001@gmail.com
+
 
 ---
 

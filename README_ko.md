@@ -139,8 +139,6 @@ PYTHONPATH=./src pytest tests
 
 정승일 (Jung Seungil)
 
-데이터 엔지니어링 인턴 @ 더존비즈온
-
 GitHub: github.com/Biotis
 
 Email: rhjung2001@gmail.com

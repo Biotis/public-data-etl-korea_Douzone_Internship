@@ -62,11 +62,11 @@ pip install -r requirements.txt
 src/config.py.example 파일을 복사해서 src/config.py로 만들고, 아래 항목에 본인의 키를 입력합니다:
 
 - `DART_API_KEY`: [Apply for OpenDART API Key](https://opendart.fss.or.kr/)
-  
 - `NTS_API_KEY`: [Apply for Business Registration Validation API (data.go.kr)](https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15081808)
 
 # src/config.py 예시
 DART_API_KEY = "YOUR_DART_API_KEY"
+
 NTS_API_KEY = "YOUR_NTS_API_KEY"
 
 💡 두 API 모두 무료지만, 신청 후 승인까지 1~2일 정도 걸릴 수 있습니다.

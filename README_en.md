@@ -1,6 +1,6 @@
 # Biznum ETL DART Pipeline
 
-An end-to-end ETL pipeline designed to collect, standardize, validate, and transform Korean corporate master data using public APIs, including OpenDART and the National Tax Service (NTS).  
+An end-to-end ETL pipeline designed to collect, preprocessing, validate, and transform Korean corporate master data using public APIs, including OpenDART and the National Tax Service (NTS).  
 This project was built as part of a data engineering internship at **Douzone Bizon**, with a focus on integrating real-world public data into a consistent and clean format for downstream analytics.
 
 ---

@@ -107,7 +107,7 @@ python -m src.pipeline
 
 각 모듈별로 단위 테스트 코드가 tests/ 폴더에 작성되어 있습니다.
 
-예시: tests/test_preprocessing.py → 홈페이지 주소, 전화번호, 사업자 대표 전처리 테스트 포함
+예시: tests/test_preprocessing.py → 홈페이지 주소, 전화번호 전처리 테스트 포함
 
 # 테스트 실행
 

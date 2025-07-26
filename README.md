@@ -133,8 +133,6 @@ PYTHONPATH=./src pytest tests
 
 Jung Seungil (정승일)
 
-Data Engineering Intern @ Douzone Bizon
-
 GitHub: github.com/Biotis
 
 Email: rhjung2001@gmail.com

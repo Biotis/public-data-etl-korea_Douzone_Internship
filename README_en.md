@@ -103,7 +103,7 @@ python -m src.pipeline
 Unit tests are provided in the `tests/` directory.
 
 Example:
-`tests/test_preprocessed.py` contains test cases for homepage normalization, name cleanup, etc.
+`tests/test_preprocessing.py` contains test cases for homepage normalization, name cleanup, etc.
 
 # Run tests
 

@@ -22,7 +22,7 @@ The broader purpose was to practice building practical ETL systems that deal wit
 ## ⚙️ Key Features
 
 - **OpenDART Ingestion**: Pulls corporate master data via OpenDART API
-- **Data Standardization**: Cleans raw fields like company names, registration numbers, URLs, and representative names
+- **Data Preprocessing**: Cleans raw fields like company names, registration numbers, URLs, and representative names
 - **Business Number Validation**: Cross-checks each registration number against the NTS API
 - **Metadata Enrichment**: Adds supplementary info (e.g., derived fields, tags) to enhance usability
 - **Structured Export**: Outputs final results into `.csv` and `.xlsx` formats
@@ -36,12 +36,12 @@ biznum-etl-dart/
 ├── README.md
 ├── requirements.txt
 ├── .gitignore
-├── data/ # Input and output files (some sample data included)
+├── data/ # ETL Output Data files (sample data included)
 ├── src/
 │ ├── config.py     # API credentials and settings
 │ ├── pipeline.py   # ETL orchestrator
 │ ├── collect/      # Data ingestion logic (OpenDART)
-│ ├── standardize/  # Cleaning and normalization modules
+│ ├── preprocessing/  # Cleaning and normalization modules
 │ ├── validate/     # Business number verification (NTS)
 │ ├── transform/    # Metadata enrichment logic
 │ └── export/       # Exporting results to file
@@ -84,7 +84,7 @@ python -m src.pipeline
 ## 🔄 ETL Flow Overview
 
 1. **Collect**: Raw data saved to data/raw_dart_data.xlsx
-2. **Standardize**: Cleaned output in data/standardized_company_data.xlsx
+2. **preprocessing**: Cleaned output in data/preprocessed_company_data.xlsx
 3. **Validate**: Verified results in data/validated_company_data.xlsx
 4. **Transform**: Metadata enriched at data/metadata_enriched_data.xlsx
 5. **Export**: Final .csv saved to data/final_output.csv
@@ -94,7 +94,7 @@ python -m src.pipeline
 ## 🧹 Example Data
 
 - Sample processed files (100 records) are provided in `data/`.
-- Actual API keys and real-world data are not included for privacy.
+- Actual API keys are not included for privacy.
 
 ---
 
@@ -103,7 +103,7 @@ python -m src.pipeline
 Unit tests are provided in the `tests/` directory.
 
 Example:
-`tests/test_standardize.py` contains test cases for homepage normalization, name cleanup, etc.
+`tests/test_preprocessed.py` contains test cases for homepage normalization, name cleanup, etc.
 
 # Run tests
 
@@ -114,7 +114,7 @@ PYTHONPATH=./src pytest tests
 ## 💡 Key ETL Functions
 
 - `collect/extract_and_save_data`: Download and save company master data
-- `standardize/standardize_company_data`: Clean fields, homepage, names, etc.
+- `preprocessing/preprocessed_company_data`: Clean fields, homepage, names, etc.
 - `validate/validate_biz_numbers`: Check business number validity via API
 - `transform/transform_with_metadata`: Apply enrichment or mapping
 - `export/export_to_csv`: Save results for downstream use
@@ -123,9 +123,9 @@ PYTHONPATH=./src pytest tests
 
 ## 📝 Notes
 
-- **API keys** must be set in `src/config.py`
-- Intermediate and output files are ignored by `.gitignore`.
-- This project was used to complete an assigned task during an internship at Douzone Bizon
+- **API keys** must be set in `src/config.py`.
+- This project was used to complete an assigned task during an internship at Douzone Bizon.
+- This repository is for portfolio and learning purposes only.
 
 ---
 
@@ -141,13 +141,8 @@ Email: rhjung2001@gmail.com
 
 ---
 
-## ⚠️ Disclaimer
-This repository is for portfolio and learning purposes only.
-
----
-
 ## 📬 Contact
 
-If you're reviewing this project for recruitment or collaboration purposes, feel free to reach out via email or GitHub.
+If you have any questions, feel free to reach out via GitHub or email.
 
 ---

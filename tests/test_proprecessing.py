@@ -1,7 +1,7 @@
 import pandas as pd
-from standardize.standardizer import standardize_company_data
+from proprecessing.proprecessed import standardize_company_data
 
-def test_standardization_basic(tmp_path):
+def test_proprecessing_basic(tmp_path):
     df = pd.DataFrame({
         '고유번호': ['00434003'],
         '정식명칭': ['다코'],

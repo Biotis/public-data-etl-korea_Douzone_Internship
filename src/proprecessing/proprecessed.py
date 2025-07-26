@@ -1,5 +1,5 @@
 """
-Standardize raw company data for further processing.
+proprecessing raw company data for further processing.
 Homepage field is thoroughly cleaned: invalid values removed, whitespace stripped,
 converted to lowercase, and common patterns like "CO.KR" are merged.
 If homepage is present and does not start with http(s), "https://" is prepended.
@@ -160,4 +160,4 @@ def standardize_company_data(input_path, output_path):
     print(f"Cleaned data saved to {output_path}")
 
 # Example usage:
-# standardize_company_data('data/raw_dart_data.xlsx', 'data/standardized_company_data.xlsx')
+# proprecessed_company_data('data/raw_dart_data.xlsx', 'data/proprecessed_company_data.xlsx')

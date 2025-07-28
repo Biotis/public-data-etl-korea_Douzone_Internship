@@ -64,7 +64,7 @@ src/config.py.example 파일을 복사해서 src/config.py로 만들고, 아래 
 - `DART_API_KEY`: [Apply for OpenDART API Key](https://opendart.fss.or.kr/)
 - `NTS_API_KEY`: [Apply for Business Registration Validation API (data.go.kr)](https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15081808)
 
-# src/config.py 예시
+## src/config.py 예시
 DART_API_KEY = "YOUR_DART_API_KEY"
 
 NTS_API_KEY = "YOUR_NTS_API_KEY"

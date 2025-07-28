@@ -5,7 +5,7 @@ This project was built as part of a data engineering internship at **Douzone Biz
 
 ---
 
-## 📌 Project Goal
+## Project Goal
 
 The main objective was to create a modular pipeline that could:
 
@@ -19,7 +19,7 @@ The broader purpose was to practice building practical ETL systems that deal wit
 
 ---
 
-## ⚙️ Key Features
+## Key Features
 
 - **OpenDART Ingestion**: Pulls corporate master data via OpenDART API
 - **Data Preprocessing**: Cleans raw fields like company names, registration numbers, URLs, and representative names
@@ -29,7 +29,7 @@ The broader purpose was to practice building practical ETL systems that deal wit
 
 ---
 
-## 🗂️ Folder Structure
+## Folder Structure
 
 ```
 biznum-etl-dart/
@@ -50,7 +50,7 @@ biznum-etl-dart/
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### 1. Install requirements
 
@@ -64,11 +64,11 @@ pip install -r requirements.txt
     - `DART_API_KEY`: [Apply for OpenDART API Key](https://opendart.fss.or.kr/)
     - `NTS_API_KEY`: [Apply for Business Registration Validation API (data.go.kr)](https://www.data.go.kr/tcs/dss/selectApiDataDetailView.do?publicDataPk=15081808)
       
-   # src/config.py (replace with your real key)
+   ## src/config.py (replace with your real key)
     - `DART_API_KEY = "YOUR_DART_API_KEY"`
     - `NTS_API_KEY = "YOUR_NTS_API_KEY"`
 
-💡 Both APIs are free to use but require registration. Approval may take 1–2 business days depending on the service.
+- Both APIs are free to use but require registration. Approval may take 1–2 business days depending on the service.
 
 
 ### 3. Run the pipeline
@@ -81,7 +81,7 @@ python -m src.pipeline
 
 ---
 
-## 🔄 ETL Flow Overview
+## ETL Flow Overview
 
 1. **Collect**: Raw data saved to data/raw_dart_data.xlsx
 2. **preprocessing**: Cleaned output in data/preprocessed_company_data.xlsx
@@ -91,14 +91,14 @@ python -m src.pipeline
 
 ---
 
-## 🧹 Example Data
+## Example Data
 
 - Sample processed files (100 records) are provided in `data/`.
 - Actual API keys are not included for privacy.
 
 ---
 
-## 🧪 Testing
+## Testing
 
 Unit tests are provided in the `tests/` directory.
 
@@ -111,7 +111,7 @@ Example:
 PYTHONPATH=./src pytest tests
 ```
 
-## 💡 Key ETL Functions
+## Key ETL Functions
 
 - `collect/extract_and_save_data`: Download and save company master data
 - `preprocessing/preprocessed_company_data`: Clean fields, homepage, names, etc.
@@ -121,7 +121,7 @@ PYTHONPATH=./src pytest tests
 
 ---
 
-## 📝 Notes
+## Notes
 
 - **API keys** must be set in `src/config.py`.
 - This project was used to complete an assigned task during an internship at Douzone Bizon.
@@ -129,18 +129,16 @@ PYTHONPATH=./src pytest tests
 
 ---
 
-## 🧑‍💻 About the Author
+## About the Author
 
 Jung Seungil (정승일)
-
-GitHub: github.com/Biotis
 
 Email: rhjung2001@gmail.com
 
 ---
 
-## 📬 Contact
+## Contact
 
-If you have any questions, feel free to reach out via GitHub or email.
+If you have any questions, feel free to reach out my email.
 
 ---

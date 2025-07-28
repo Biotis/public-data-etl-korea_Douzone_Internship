@@ -5,7 +5,7 @@ OpenDART와 국세청(NTS)의 공공 API를 활용해서, 한국 기업의 마�
 
 ---
 
-## 📌 프로젝트 목표
+## 프로젝트 목표
 
 이 프로젝트의 목표는 다음과 같습니다:
 
@@ -19,7 +19,7 @@ OpenDART와 국세청(NTS)의 공공 API를 활용해서, 한국 기업의 마�
 
 ---
 
-## ⚙️ 주요 기능
+## ⚙주요 기능
 
 - **OpenDART 수집**: OpenDART API를 통해 기업 마스터 데이터를 수집
 - **데이터 전처리**: 상호명, 사업자번호, 홈페이지, 전화번호 등 표준화
@@ -29,7 +29,7 @@ OpenDART와 국세청(NTS)의 공공 API를 활용해서, 한국 기업의 마�
 
 ---
 
-## 🗂️ 폴더 구조
+##  폴더 구조
 
 ```
 biznum-etl-dart/
@@ -50,7 +50,7 @@ biznum-etl-dart/
 
 ---
 
-## 🚀 빠르게 실행해보기
+## 빠르게 실행해보기
 
 ### 1. 필요한 패키지 설치
 
@@ -69,7 +69,7 @@ DART_API_KEY = "YOUR_DART_API_KEY"
 
 NTS_API_KEY = "YOUR_NTS_API_KEY"
 
-💡 두 API 모두 무료지만, 신청 후 승인까지 1~2일 정도 걸릴 수 있습니다.
+- 두 API 모두 무료지만, 신청 후 승인까지 1~2일 정도 걸릴 수 있습니다.
 
 ### 3. 파이프라인 실행
 
@@ -81,7 +81,7 @@ python -m src.pipeline
 
 ---
 
-## 🔄 ETL 흐름 요약
+## ETL 흐름 요약
 
 **Collect**: 원시 데이터 수집 → data/raw_dart_data.xlsx
 
@@ -95,13 +95,13 @@ python -m src.pipeline
 
 ---
 
-## 🧹 샘플 데이터
+## 샘플 데이터
 
 - data/ 폴더에 파이프라인을 실행하여 나온 Output 각 파일에는 기업 정보 처리 샘플 데이터(100건)가 포함되어 있습니다.
 
 ---
 
-## 🧪 테스트
+## 테스트
 
 각 모듈별로 단위 테스트 코드가 tests/ 폴더에 작성되어 있습니다.
 
@@ -113,7 +113,7 @@ PYTHONPATH=./src pytest tests
 
 ---
 
-## 💡 주요 ETL 함수 정리
+## 주요 ETL 함수 정리
 
 - `collect/extract_and_save_data`: 기업 데이터 수집 및 저장
 - `preprocessing/preprocessed_company_data`: 기업명, 홈페이지, 등록번호 등 데이터 전처리
@@ -123,7 +123,7 @@ PYTHONPATH=./src pytest tests
 
 ---
 
-## 📝 참고 사항
+## 참고 사항
 
 - **API key**는 src/config.py에 직접 입력해야 합니다.
 - 이 프로젝트는 더존비즈온 인턴십 기간 동안 주어진 과제를 수행하기 위해 사용되었습니다.
@@ -131,7 +131,7 @@ PYTHONPATH=./src pytest tests
 
 ---
 
-## 👤 작성자 소개
+## 작성자 소개
 
 정승일 (Jung Seungil)
 
@@ -141,7 +141,7 @@ Email: rhjung2001@gmail.com
 
 ---
 
-## 📬 문의
+## 문의
 
 궁금한 점이 있으시면 이메일로 편하게 연락 주세요.
 

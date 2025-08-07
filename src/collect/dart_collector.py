@@ -7,6 +7,7 @@ import xmltodict
 import pandas as pd
 import zipfile
 import io
+import time
 import os
 
 def get_corp_codes(api_key: str):
@@ -59,9 +60,9 @@ def get_company_info(api_key: str, corp_code: str):
         print(f"Error fetching company info for {corp_code}: {e}")
         return None
 
-def extract_and_save_data(api_key: str, start_index: int, end_index: int, filename: str = "company_info.csv"):
+def extract_and_save_data(api_key: str, start_index: int, end_index: int, filename: str = "company_info.xlsx"):
     """
-    Extracts a range of company info and saves to a CSV file.
+    Extracts a range of company info and saves to an Excel file.
     """
     corp_codes = get_corp_codes(api_key)
     data_list = []
@@ -74,6 +75,8 @@ def extract_and_save_data(api_key: str, start_index: int, end_index: int, filena
             modify_date = company['modify_date']
 
             company_info = get_company_info(api_key, corp_code)
+            time.sleep(0.5)
+
             if company_info:
                 data_list.append({
                     '고유번호': corp_code,
@@ -97,9 +100,8 @@ def extract_and_save_data(api_key: str, start_index: int, end_index: int, filena
             print(f"Error processing company {index}: {e}")
 
     df = pd.DataFrame(data_list)
-    # df.to_csv(filename, index=False, encoding='utf-8-sig')
     df.to_excel(filename, index=False, engine='openpyxl')
     print(f"Saved to {filename}")
 
 # Example usage (remove or comment out in production)
-# extract_and_save_data(api_key="YOUR_DART_API_KEY", start_index=0, end_index=10, filename="company_info_sample.csv")
+# extract_and_save_data(api_key="YOUR_DART_API_KEY", start_index=0, end_index=10, filename="company_info_sample.xlsx")

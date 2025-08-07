@@ -78,7 +78,7 @@ def validate_biz_numbers(input_path, output_path, service_key):
 
     # 최종 저장
     df.to_excel(output_path, index=False, engine="openpyxl")
-    print(f"[성공] 유효성 검증 결과 저장 완료 → {output_path}")
+    print(f"Validation results saved to {output_path}")
 
 # Example usage:
 # validate_biz_numbers('data/cleaned_company_info.xlsx', 'data/final_validated.xlsx', 'YOUR_SERVICE_KEY')
